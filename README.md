@@ -13,7 +13,7 @@ An automated AI red-teaming platform that continuously tests LLMs for prompt inj
 | **Hania Khan** | Team Lead · Backend (Node.js/Express) · AI API Integration · Attack Engine · Hardware (Arduino) |
 | **Bushra Kanooz Khan** | Frontend (React Dashboard) · UI/UX Design · Report Generation · Testing |
 
-**Degree:** BSc Computer Engineering · **Domain:** Artificial Intelligence & Cybersecurity · **Year:** 2026
+**Degree:** BSc Computer Engineering · **Domain:** Artificial Intelligence & Cybersecurity · **Year:** 2027
 
 ---
 
@@ -87,4 +87,4 @@ npm run dev
 ---
 
 *SentinelAI — Securing AI, One Prompt at a Time*
-*Final Year Project · BZU 2026*
+*Final Year Project · BZU 2027*
