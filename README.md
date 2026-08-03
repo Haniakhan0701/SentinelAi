@@ -17,20 +17,49 @@ An automated AI red-teaming platform that continuously tests LLMs for prompt inj
 
 ---
 
-## What it does
-Attack Prompt Library
-│
-▼
-Attack Engine (Node.js) ──► sends prompts to ──► Gemini API
-│
-▼
-Response Analyzer (rule-based + LLM-as-judge)
-│
-▼
-MongoDB Atlas ──► React Dashboard (live results, safety score)
-│
-▼
-Arduino Nano ──► Red/Green LED + Buzzer alert
+## 🚀 What It Does
+
+1. **Attack Prompt Library**
+   - Stores jailbreak, prompt injection, role-play, bias, and harmful prompt templates.
+
+   ⬇️
+
+2. **Attack Engine (Node.js)**
+   - Selects an attack prompt.
+   - Sends it to the target AI model.
+
+   ⬇️
+
+3. **Google Gemini API**
+   - Generates a response to the attack prompt.
+
+   ⬇️
+
+4. **Response Analyzer**
+   - Evaluates whether the response is **Safe** or **Unsafe**.
+   - Uses rule-based checks and LLM-as-a-Judge evaluation.
+
+   ⬇️
+
+5. **MongoDB Atlas**
+   - Stores prompts, responses, attack history, and evaluation results.
+
+   ⬇️
+
+6. **React Dashboard**
+   - Displays:
+     - Live attack feed
+     - Safety score
+     - Attack analytics
+     - Reports
+     - Attack history
+
+   ⬇️
+
+7. **Arduino Nano**
+   - 🟢 Green LED = Safe Response
+   - 🔴 Red LED = Unsafe Response
+   - 🔊 Buzzer = Alert for critical attacks
 ## Tech Stack
 
 | Layer | Technology |
