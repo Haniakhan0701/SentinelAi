@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  /* DARK THEME (default) */
+  --base: #0A0F14;
+  --panel: #101821;
+  --panel2: #151F2B;
+  --line: #22303D;
+  --text: #DCE6EE;
+  --muted: #7C8FA0;
+  --signal: #39FF88;
+  --alert: #FF4757;
+  --watch: #FFB020;
+  --wire: #3AA0FF;
+}
+
+:root.light {
+  /* LIGHT THEME */
+  --base: #F1F4F8;
+  --panel: #FFFFFF;
+  --panel2: #F7F9FC;
+  --line: #DFE6ED;
+  --text: #16212C;
+  --muted: #5B6B7A;
+  --signal: #0F9D58;
+  --alert: #D93025;
+  --watch: #C77700;
+  --wire: #1A73E8;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-base text-text font-sans antialiased;
+  transition: background-color 0.35s ease, color 0.35s ease;
+}
+
+:root:not(.light) body {
+  background-image:
+    radial-gradient(circle at 15% 0%, rgba(58,160,255,0.06) 0%, transparent 45%),
+    radial-gradient(circle at 85% 20%, rgba(57,255,136,0.05) 0%, transparent 40%);
+  background-attachment: fixed;
+}
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--line); border-radius: 8px; }
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+.pulse-dot { animation: pulse-dot 1.6s ease-in-out infinite; }
+
+/* ---- "4D" tilt card: subtle 3D perspective on mouse move ---- */
+.tilt-card {
+  transform-style: preserve-3d;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  will-change: transform;
+}
+.tilt-card:hover {
+  box-shadow: 0 20px 40px -20px rgba(0,0,0,0.45);
+}
+.tilt-card-inner {
+  transform: translateZ(24px);
+}
+
+/* soft glow ring used behind key numbers */
+.glow-ring {
+  position: relative;
+}
+.glow-ring::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, var(--wire), transparent 40%, var(--signal));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-up { animation: fade-up 0.4s ease both; }
