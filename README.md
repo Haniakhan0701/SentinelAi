@@ -100,11 +100,11 @@ npm run dev
 
 ## Features
 
-- 🎯 Automated adversarial prompt testing across 5 attack categories
-- 🧠 Two-layer safety analysis (rule-based + LLM-as-judge)
-- 📊 Real-time dashboard with safety scoring
-- 💡 Hardware alert system (Arduino LEDs + buzzer)
-- 📄 Downloadable vulnerability reports
+-  Automated adversarial prompt testing across 5 attack categories
+-  Two-layer safety analysis (rule-based + LLM-as-judge)
+-  Real-time dashboard with safety scoring
+-  Hardware alert system (Arduino LEDs + buzzer)
+-  Downloadable vulnerability reports
 
 ## Future Scope
 
