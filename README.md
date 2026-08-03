@@ -17,7 +17,7 @@ An automated AI red-teaming platform that continuously tests LLMs for prompt inj
 
 ---
 
-## 🚀 What It Does
+##  What It Does
 
 1. **Attack Prompt Library**
    - Stores jailbreak, prompt injection, role-play, bias, and harmful prompt templates.
