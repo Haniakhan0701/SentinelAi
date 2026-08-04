@@ -1,12 +1,14 @@
-FROM node:20-slim
-
+FROM node:20-alpine
 WORKDIR /app
 
-COPY package.json package-lock.json ./
-RUN npm install --omit=dev
+# Copy package.json from the backend folder
+COPY backend/package*.json ./
 
-COPY . .
+# Install dependencies
+RUN npm install
 
-EXPOSE 5000
+# Copy the rest of the backend source code (server.js, data, etc.)
+COPY backend/. .
 
-CMD ["npm", "start"]
+# Start the server
+CMD ["node", "server.js"]
