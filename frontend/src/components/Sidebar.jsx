@@ -9,9 +9,9 @@ const navItems = [
   { icon: Settings, label: "Settings", path: "/settings" }
 ];
 
-export default function Sidebar() {
+export default function Sidebar({ onNavigate }) {
   return (
-    <aside className="w-60 shrink-0 border-r border-line bg-panel flex flex-col">
+    <aside className="w-64 lg:w-60 h-full shrink-0 border-r border-line bg-panel flex flex-col">
       <div className="flex items-center gap-2 px-5 py-5 border-b border-line">
         <ShieldHalf className="text-signal" size={22} />
         <div>
@@ -26,6 +26,7 @@ export default function Sidebar() {
             key={label}
             to={path}
             end={path === "/"}
+            onClick={onNavigate}
             className={({ isActive }) =>
               `w-full flex items-center gap-3 px-3 py-2 rounded-md text-sm transition-colors ${
                 isActive

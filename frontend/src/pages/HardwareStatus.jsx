@@ -1,4 +1,4 @@
-import TopBar from "../components/TopBar.jsx";
+import TopBar from "../components/Topbar.jsx";
 import TiltCard from "../components/TiltCard.jsx";
 import { hardwareStatus } from "../data/mockData.js";
 import { Cpu, Wifi, WifiOff } from "lucide-react";
@@ -13,7 +13,7 @@ export default function HardwareStatus() {
         subtitle="Arduino Nano connection and alert component states"
       />
 
-      <main className="flex-1 px-8 py-6 space-y-6 fade-up">
+      <main className="flex-1 px-4 sm:px-8 py-4 sm:py-6 space-y-6 fade-up">
         <TiltCard className="rounded-lg border border-line bg-panel px-6 py-5 flex items-center justify-between">
           <div className="flex items-center gap-3">
             {connected ? <Wifi className="text-signal" size={20} /> : <WifiOff className="text-alert" size={20} />}
